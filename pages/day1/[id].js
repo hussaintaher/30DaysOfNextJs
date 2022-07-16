@@ -1,9 +1,17 @@
 import React from 'react'
+import styles from '../../styles/Home.module.css'
 
 const index = ({singlePost}) => {
   return (
-    <div>
-        {}
+    <div className={styles.main}>
+    {console.log(singlePost)}
+        <div class="card w-96 bg-base-100 shadow-xl image-full">
+            <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+            <div class="card-body">
+                <h2 class="card-title">{singlePost.title}</h2>
+                <p>{singlePost.body}</p>
+            </div>
+        </div>
     </div>
   )
 }
@@ -19,7 +27,7 @@ export async function getStaticPaths() {
             params: {id: JSON.stringify(item.id)}
         }
     })
-    console.log(postsPaths)
+    //console.log(postsPaths)
     return {
         paths: postsPaths,
         fallback: false // only accepts h and a params

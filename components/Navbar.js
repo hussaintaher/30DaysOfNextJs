@@ -1,11 +1,17 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Navbar = () => {
   return (
     <>
     <div class="navbar bg-base-100 border-b-2">
         <div class="flex-1">
-         <a class="btn btn-ghost normal-case text-xl">30DaysOfNextJs</a>
+          <Link href="/">
+            <a class="btn btn-ghost normal-case text-xl">
+              30DaysOfCode
+            </a>
+          </Link>
+
         </div>
         <div class="flex-none">
             <button class="btn btn-square btn-ghost">
